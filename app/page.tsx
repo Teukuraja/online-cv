@@ -4,10 +4,14 @@ import ProjectsGrid from '@/components/ProjectsGrid';
 import Experience from '@/components/Experience';
 import TechStack from '@/components/TechStack';
 import ContactCard from '@/components/ContactCard';
+import LoadingScreen from '@/components/LoadingScreen';
 
 export default function Home() {
   return (
     <main className="min-h-screen relative overflow-hidden">
+      {/* Preloader / Loading Screen Berlogo TR */}
+      <LoadingScreen />
+
       {/* Ambient background glow & developer grid pattern */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute inset-0 bg-grid-light dark:bg-grid-dark opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)]" />
