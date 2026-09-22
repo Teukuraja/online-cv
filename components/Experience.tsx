@@ -107,7 +107,7 @@ export default function Experience() {
             </h3>
           </div>
 
-          <div className="relative pl-6 sm:pl-7 space-y-8 before:absolute before:inset-y-3 before:left-2.5 sm:before:left-3 before:w-0.5 before:bg-gradient-to-b before:from-blue-600 before:via-indigo-500 before:to-cyan-500 dark:before:from-cyan-400 dark:before:via-emerald-400 dark:before:to-teal-400">
+          <div className="relative pl-6 sm:pl-7 space-y-8 pt-2 pb-4 before:absolute before:inset-y-3 before:left-2.5 sm:before:left-3 before:w-0.5 before:bg-gradient-to-b before:from-blue-600 before:via-indigo-500 before:to-cyan-500 dark:before:from-cyan-400 dark:before:via-emerald-400 dark:before:to-teal-400">
             {EXPERIENCES.map((job) => (
               <div key={job.role} className="relative group">
                 
@@ -116,9 +116,10 @@ export default function Experience() {
 
                 {/* Kartu Detail Pekerjaan */}
                 <motion.div
-                  initial={{ opacity: 0, y: 48 }}
+                  initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                   className="p-5 sm:p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:border-blue-400 dark:hover:border-cyan-400/50 backdrop-blur-md transition-all duration-300 space-y-3"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-1.5">
@@ -175,9 +176,10 @@ export default function Experience() {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 48 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
               className="p-5 sm:p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:border-emerald-400 dark:hover:border-emerald-500/50 backdrop-blur-md transition-all duration-300 space-y-2.5 group"
             >
               <div className="flex flex-wrap items-center justify-between gap-1.5">
@@ -229,10 +231,11 @@ export default function Experience() {
 
             {/* Grid Kartu/Badge Sertifikat */}
             <motion.div
-              initial={{ opacity: 0, y: 48 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-1 gap-2.5"
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="grid grid-cols-1 gap-2.5 pt-1"
             >
               {CERT_HIGHLIGHTS.map((cert) => (
                 <a

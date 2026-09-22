@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme } from '@/components/ThemeProvider';
 import { useLenis } from '@/components/SmoothScroll';
 
@@ -14,6 +14,14 @@ const NAV_LINKS = [
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const { scrollTo } = useLenis();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -29,7 +37,11 @@ export default function Navbar() {
       {/* ========================================================================= */}
       {/* 1. DESKTOP NAVBAR: Fixed Menempel di Atas Layar (Hanya Layar md ke Atas)  */}
       {/* ========================================================================= */}
-      <header className="hidden md:flex fixed top-0 inset-x-0 z-50 w-full border-b border-slate-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-xs transition-all duration-300">
+      <header className={`hidden md:flex fixed top-0 inset-x-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/70 dark:bg-slate-950/75 backdrop-blur-xl border-b border-slate-200/80 dark:border-white/10 shadow-sm shadow-slate-900/5 dark:shadow-black/20'
+          : 'bg-transparent border-b border-transparent'
+      }`}>
         <div className="max-w-5xl w-full mx-auto px-6 py-3 flex items-center justify-between">
           {/* Kiri: Inisial Logo Profil & Branding Nama Lengkap */}
           <a
@@ -106,7 +118,11 @@ export default function Navbar() {
       {/* ========================================================================= */}
       {/* 2. MOBILE TOP BAR: Minimalis & Ringkas di Atas Layar HP (md:hidden)       */}
       {/* ========================================================================= */}
-      <header className="md:hidden sticky top-2.5 z-40 w-[calc(100%-1.5rem)] mx-auto px-3.5 py-2 rounded-full border border-slate-200/80 dark:border-white/10 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm flex items-center justify-between transition-all">
+      <header className={`md:hidden sticky top-2.5 z-40 w-[calc(100%-1.5rem)] mx-auto px-3.5 py-2 rounded-full flex items-center justify-between transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/75 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/80 dark:border-white/10 shadow-sm'
+          : 'bg-white/40 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200/40 dark:border-white/5'
+      }`}>
         {/* Logo & Inisial + Sub-teks S1 Informatika */}
         <a
           href="#"

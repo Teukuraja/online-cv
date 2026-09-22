@@ -64,9 +64,10 @@ export default function TechStack() {
         
         {/* KELOMPOK 1: Pengembangan Web */}
         <motion.div
-          initial={{ opacity: 0, y: 48 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/15 hover:border-blue-400 dark:hover:border-cyan-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
         >
           <div className="space-y-4">
@@ -103,9 +104,10 @@ export default function TechStack() {
 
         {/* KELOMPOK 2: Pemrograman & Basis Data */}
         <motion.div
-          initial={{ opacity: 0, y: 48 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:shadow-emerald-500/15 hover:border-indigo-400 dark:hover:border-emerald-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
         >
           <div className="space-y-4">
@@ -142,9 +144,10 @@ export default function TechStack() {
 
         {/* KELOMPOK 3: Alat Cloud & AI */}
         <motion.div
-          initial={{ opacity: 0, y: 48 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 dark:hover:shadow-teal-500/15 hover:border-cyan-400 dark:hover:border-teal-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
         >
           <div className="space-y-4">
@@ -181,9 +184,10 @@ export default function TechStack() {
 
         {/* KELOMPOK 4: Perawatan Sistem (Keahlian Pendukung) */}
         <motion.div
-          initial={{ opacity: 0, y: 48 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
           className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-amber-500/10 dark:hover:shadow-amber-500/15 hover:border-amber-400 dark:hover:border-amber-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
         >
           <div className="space-y-4">

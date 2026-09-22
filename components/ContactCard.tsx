@@ -41,9 +41,10 @@ export default function ContactCard() {
 
       {/* Card Panggilan Aksi (Terpusat) */}
       <motion.div
-        initial={{ opacity: 0, y: 48 }}
+        initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className="relative rounded-3xl p-8 sm:p-14 bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-xl shadow-slate-200/50 dark:shadow-cyan-500/5 backdrop-blur-md text-center space-y-6 max-w-3xl mx-auto transition-all duration-300 hover:border-blue-400 dark:hover:border-cyan-400/50"
       >
         {/* Pill Badge: Relocation */}
