@@ -15,10 +15,6 @@ export interface ProjectItem {
   badgeType: 'journal' | 'web';
   title: string;
   description: string;
-  topLink?: {
-    label: string;
-    url: string;
-  };
   subtitleRight?: string;
   highlightsTitle?: string;
   highlights?: ProjectHighlight[];
@@ -38,10 +34,6 @@ export const PROJECTS_DATA: ProjectItem[] = [
     title: 'Analisis Pemakaian Spare Part Alat Berat Menggunakan Simple Moving Average',
     description:
       'Merancang & membangun sistem dashboard analitik berbasis web untuk memprediksi kebutuhan suku cadang alat berat menggunakan algoritma SMA. Mengurangi risiko over-stocking dan downtime operasional di industri tambang/logistik.',
-    topLink: {
-      label: 'Berkas HAKI',
-      url: 'https://drive.google.com/file/d/19AH9pIork3RfwpCri4k_mRPtxdul5Yt_/view',
-    },
     highlightsTitle: 'Sorotan Riset & HAKI:',
     highlights: [
       { icon: '📈', label: 'Prediksi Suku Cadang' },

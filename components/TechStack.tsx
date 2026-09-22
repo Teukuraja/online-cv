@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const MARQUEE_SKILLS = [
   { name: 'React.js', icon: '⚛️' },
@@ -62,7 +63,12 @@ export default function TechStack() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         {/* KELOMPOK 1: Pengembangan Web */}
-        <div className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/15 hover:border-blue-400 dark:hover:border-cyan-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+          className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/15 hover:border-blue-400 dark:hover:border-cyan-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
+        >
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/30 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
@@ -93,10 +99,15 @@ export default function TechStack() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* KELOMPOK 2: Pemrograman & Basis Data */}
-        <div className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:shadow-emerald-500/15 hover:border-indigo-400 dark:hover:border-emerald-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+          className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:shadow-emerald-500/15 hover:border-indigo-400 dark:hover:border-emerald-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
+        >
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-indigo-500/10 dark:bg-emerald-500/10 border border-indigo-500/20 dark:border-emerald-500/30 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
@@ -127,10 +138,15 @@ export default function TechStack() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* KELOMPOK 3: Alat Cloud & AI */}
-        <div className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 dark:hover:shadow-teal-500/15 hover:border-cyan-400 dark:hover:border-teal-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+          className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 dark:hover:shadow-teal-500/15 hover:border-cyan-400 dark:hover:border-teal-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
+        >
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-cyan-500/10 dark:bg-teal-500/10 border border-cyan-500/20 dark:border-teal-500/30 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
@@ -161,10 +177,15 @@ export default function TechStack() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* KELOMPOK 4: Perawatan Sistem (Keahlian Pendukung) */}
-        <div className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-amber-500/10 dark:hover:shadow-amber-500/15 hover:border-amber-400 dark:hover:border-amber-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+          className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-amber-500/10 dark:hover:shadow-amber-500/15 hover:border-amber-400 dark:hover:border-amber-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
+        >
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 dark:bg-amber-500/10 border border-amber-500/20 dark:border-amber-500/30 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
@@ -200,7 +221,7 @@ export default function TechStack() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

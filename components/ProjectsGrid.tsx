@@ -36,19 +36,12 @@ export default function ProjectsGrid() {
         
         {/* KARTU 1: PUBLIKASI JURNAL & HAKI (Dua Tombol Sejajar Ujung ke Ujung) */}
         <motion.div
-          animate={{
-            y: [-6, 6, -6],
-            rotate: [-0.6, 0.6, -0.6],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
           whileHover={{
-            y: -10,
-            rotate: 0,
-            transition: { duration: 0.3, ease: 'easeOut' },
+            y: -6,
+            transition: { duration: 0.2, ease: 'easeOut' },
           }}
           className="h-full flex flex-col justify-between rounded-2xl p-6 sm:p-7 bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:border-cyan-500/40 dark:hover:border-cyan-400/60 hover:shadow-lg backdrop-blur-md transition-colors duration-300 group"
         >
@@ -58,17 +51,6 @@ export default function ProjectsGrid() {
               <span className="px-3 py-1 rounded-full bg-blue-500/10 dark:bg-cyan-500/15 border border-blue-500/20 dark:border-cyan-500/30 text-blue-600 dark:text-cyan-400 text-[11px] font-bold tracking-wide uppercase">
                 {journalProject.badge}
               </span>
-              {journalProject.topLink && (
-                <a
-                  href={journalProject.topLink.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400 flex items-center gap-1 transition-colors"
-                >
-                  <span>{journalProject.topLink.label}</span>
-                  <FaExternalLinkAlt className="text-[10px]" />
-                </a>
-              )}
             </div>
 
             {/* Judul Karya */}
@@ -141,20 +123,12 @@ export default function ProjectsGrid() {
 
         {/* KARTU 2: APLIKASI WEB RESPONSIF */}
         <motion.div
-          animate={{
-            y: [6, -6, 6],
-            rotate: [0.6, -0.6, 0.6],
-          }}
-          transition={{
-            duration: 6.5,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 0.3,
-          }}
+          initial={{ opacity: 0, y: 48 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
           whileHover={{
-            y: -10,
-            rotate: 0,
-            transition: { duration: 0.3, ease: 'easeOut' },
+            y: -6,
+            transition: { duration: 0.2, ease: 'easeOut' },
           }}
           className="h-full flex flex-col justify-between rounded-2xl p-6 sm:p-7 bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:border-cyan-500/40 dark:hover:border-cyan-400/60 hover:shadow-lg backdrop-blur-md transition-colors duration-300 group"
         >
@@ -212,14 +186,14 @@ export default function ProjectsGrid() {
 
           {/* Tombol Aksi */}
           <div className="pt-6 mt-6 border-t border-slate-200/80 dark:border-white/10 flex items-center justify-between gap-3">
-            <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+            <span className="text-xs font-medium text-slate-500 dark:text-slate-400 truncate">
               {webProject.footerSub || 'Frontend & Backend Integration'}
             </span>
             <a
               href={webProject.primaryAction.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2.5 rounded-xl text-xs font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer"
+              className="px-4 py-2.5 rounded-xl text-xs font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer shrink-0 whitespace-nowrap"
             >
               <FaGithub className="text-sm" />
               <span>{webProject.primaryAction.label}</span>

@@ -1,14 +1,15 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { useLenis } from '@/components/SmoothScroll';
 
 export default function Hero() {
+  const { scrollTo } = useLenis();
   return (
     <section
       id="tentang"
-      className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-20"
+      className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-16 sm:pt-20 sm:pb-20 md:pt-28 md:pb-20"
       aria-label="Hero dan Tentang Saya"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -107,7 +108,11 @@ export default function Hero() {
             {/* Lihat Proyek (Isi Gradasi) */}
             <a
               href="#proyek"
-              className="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-md shadow-blue-500/25 dark:shadow-cyan-500/25 hover:shadow-xl hover:shadow-blue-500/40 dark:hover:shadow-cyan-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo('#proyek', { duration: 1.8, offset: -80 });
+              }}
+              className="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-md shadow-blue-500/25 dark:shadow-cyan-500/25 hover:shadow-xl hover:shadow-blue-500/40 dark:hover:shadow-cyan-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
             >
               <span>Lihat Proyek &amp; HAKI</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,7 +123,11 @@ export default function Hero() {
             {/* Hubungi Saya (Tombol Outline Gradasi Glowing) */}
             <a
               href="#kontak"
-              className="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 bg-white/80 dark:bg-slate-900/80 border-2 border-blue-500/40 dark:border-cyan-400/40 hover:border-blue-600 dark:hover:border-cyan-400 hover:text-blue-600 dark:hover:text-cyan-400 shadow-xs hover:shadow-lg hover:shadow-blue-500/15 dark:hover:shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo('#kontak', { duration: 1.8, offset: -80 });
+              }}
+              className="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 bg-white/80 dark:bg-slate-900/80 border-2 border-blue-500/40 dark:border-cyan-400/40 hover:border-blue-600 dark:hover:border-cyan-400 hover:text-blue-600 dark:hover:text-cyan-400 shadow-xs hover:shadow-lg hover:shadow-blue-500/15 dark:hover:shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
             >
               <span>Hubungi Saya</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,7 +182,7 @@ export default function Hero() {
 
           <div className="hidden sm:flex absolute -bottom-4 -right-6 px-3.5 py-1.5 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-800 shadow-md shadow-slate-300/50 dark:shadow-black/50 backdrop-blur-md items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200 animate-float [animation-delay:2s]">
             <span className="text-emerald-600 dark:text-emerald-400" aria-hidden="true">🤖</span>
-            <span>Azure AI &amp; Python</span>
+            <span>Microsoft Fabric &amp; Python</span>
           </div>
 
         </div>

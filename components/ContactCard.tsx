@@ -1,9 +1,35 @@
 'use client';
 
-import React from 'react';
-import { FaWhatsapp, FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  FaWhatsapp,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+  FaCheck,
+  FaRegCopy,
+} from 'react-icons/fa';
+import { useLenis } from '@/components/SmoothScroll';
 
 export default function ContactCard() {
+  const [copied, setCopied] = useState(false);
+  const { scrollTo } = useLenis();
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('teuku1923@gmail.com');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // Fallback
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    }
+  };
+
   return (
     <section
       id="kontak"
@@ -14,8 +40,12 @@ export default function ContactCard() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 dark:bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Card Panggilan Aksi (Terpusat) */}
-      <div className="relative rounded-3xl p-8 sm:p-14 bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-xl shadow-slate-200/50 dark:shadow-cyan-500/5 backdrop-blur-md text-center space-y-6 max-w-3xl mx-auto transition-all duration-300 hover:border-blue-400 dark:hover:border-cyan-400/50">
-        
+      <motion.div
+        initial={{ opacity: 0, y: 48 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+        className="relative rounded-3xl p-8 sm:p-14 bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-xl shadow-slate-200/50 dark:shadow-cyan-500/5 backdrop-blur-md text-center space-y-6 max-w-3xl mx-auto transition-all duration-300 hover:border-blue-400 dark:hover:border-cyan-400/50"
+      >
         {/* Pill Badge: Relocation */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/30 text-blue-700 dark:text-cyan-400 text-xs font-bold">
           <span>✈️ Siap Ditempatkan di Mana Saja (Open to Relocation)</span>
@@ -36,7 +66,6 @@ export default function ContactCard() {
 
         {/* 2 Tombol Aksi Utama Berdampingan Simetris */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          
           {/* Tombol WhatsApp */}
           <a
             href="https://wa.me/6282350191117"
@@ -48,7 +77,7 @@ export default function ContactCard() {
             <span>Kirim Pesan via WhatsApp</span>
           </a>
 
-          {/* Tombol Email */}
+          {/* Tombol Email Direct */}
           <a
             href="mailto:teuku1923@gmail.com"
             target="_blank"
@@ -58,7 +87,45 @@ export default function ContactCard() {
             <FaEnvelope className="text-sm" />
             <span>Kirim Email Direct</span>
           </a>
+        </div>
 
+        {/* Email Copy-to-Clipboard Interactive Button with Toast Feedback */}
+        <div className="flex flex-col items-center justify-center gap-2 pt-1">
+          <button
+            type="button"
+            onClick={handleCopyEmail}
+            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-slate-100/90 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 hover:border-blue-400 dark:hover:border-cyan-400 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 text-xs font-mono font-medium transition-all duration-200 group cursor-pointer shadow-xs hover:shadow-md hover:scale-[1.02] active:scale-95"
+            title="Klik untuk menyalin alamat email"
+          >
+            <span>teuku1923@gmail.com</span>
+            {copied ? (
+              <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-bold font-sans text-[11px] bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 rounded-md transition-all">
+                <FaCheck className="text-[10px]" />
+                <span>Tersalin!</span>
+              </span>
+            ) : (
+              <span className="flex items-center gap-1 text-slate-400 group-hover:text-blue-500 dark:group-hover:text-cyan-400 font-sans text-[11px] transition-colors">
+                <FaRegCopy className="text-[11px]" />
+                <span>Salin</span>
+              </span>
+            )}
+          </button>
+
+          {/* Interactive Floating Toast */}
+          <AnimatePresence>
+            {copied && (
+              <motion.div
+                initial={{ opacity: 0, y: -6, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -6, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-600 text-white text-[11px] font-semibold shadow-md shadow-emerald-600/30"
+              >
+                <FaCheck className="text-[10px]" />
+                <span>Email berhasil disalin ke clipboard!</span>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Barisan Ikon Medsos Interaktif */}
@@ -103,8 +170,7 @@ export default function ContactCard() {
             <FaFacebook />
           </a>
         </div>
-
-      </div>
+      </motion.div>
 
       {/* Footer Paling Bawah: Garis pembatas tipis dengan teks hak cipta */}
       <footer className="mt-16 pt-8 border-t border-slate-200/80 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
@@ -114,7 +180,11 @@ export default function ContactCard() {
         <div className="flex items-center gap-4">
           <a
             href="#"
-            className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors font-medium"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollTo(0, { duration: 1.8 });
+            }}
+            className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors font-medium cursor-pointer"
           >
             Kembali ke Atas &uarr;
           </a>

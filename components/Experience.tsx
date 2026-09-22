@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaExternalLinkAlt, FaGraduationCap, FaBriefcase, FaAward } from 'react-icons/fa';
 
 const EXPERIENCES = [
@@ -33,18 +34,18 @@ const EXPERIENCES = [
 
 const CERT_HIGHLIGHTS = [
   {
-    title: 'Membangun Aplikasi Gen AI dengan Microsoft Azure',
-    year: '2025',
-    issuer: 'Dicoding & Microsoft',
-    link: 'https://www.dicoding.com/certificates/1RXYQQEKKZVM',
-    badge: 'Gen AI & Azure',
+    title: 'Belajar Penerapan Data Science dengan Microsoft Fabric',
+    year: '2026',
+    issuer: 'Dicoding (Dicoding Elevate)',
+    link: 'https://www.dicoding.com/elevate/certificates/PRE59KR1AB',
+    badge: 'Data Science',
   },
   {
-    title: 'Cloud Practitioner Essentials (AWS Cloud)',
-    year: '2023',
-    issuer: 'Dicoding & AWS',
-    link: 'https://www.dicoding.com/certificates/JLX1W8NG2P72',
-    badge: 'AWS Cloud',
+    title: 'Sinergi Machine Learning dan Generative AI',
+    year: '2026',
+    issuer: 'Dicoding (Dicoding Elevate)',
+    link: 'https://www.dicoding.com/elevate/certificates/OFL1V7Q4ZMQK',
+    badge: 'Machine Learning',
   },
   {
     title: 'Belajar Fundamental Deep Learning',
@@ -54,18 +55,18 @@ const CERT_HIGHLIGHTS = [
     badge: 'Deep Learning',
   },
   {
-    title: 'Penerapan Data Science dengan Microsoft Fabric',
-    year: '2025',
-    issuer: 'Dicoding & Microsoft',
-    link: 'https://www.dicoding.com/elevate/certificates/PRE59KR1AB',
-    badge: 'Data Science',
-  },
-  {
     title: 'Belajar Machine Learning & AI Essentials',
     year: '2024',
     issuer: 'Dicoding',
     link: 'https://www.dicoding.com/certificates/07Z6W29R2ZQR',
     badge: 'Machine Learning',
+  },
+  {
+    title: 'Cloud Practitioner Essentials (AWS Cloud)',
+    year: '2023',
+    issuer: 'Dicoding & AWS',
+    link: 'https://www.dicoding.com/certificates/JLX1W8NG2P72',
+    badge: 'AWS Cloud',
   },
 ];
 
@@ -114,7 +115,12 @@ export default function Experience() {
                 <div className="absolute -left-[27px] sm:-left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-blue-600 dark:bg-cyan-400 ring-4 ring-slate-100 dark:ring-slate-950 group-hover:scale-125 transition-transform" />
 
                 {/* Kartu Detail Pekerjaan */}
-                <div className="p-5 sm:p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:border-blue-400 dark:hover:border-cyan-400/50 backdrop-blur-md transition-all duration-300 space-y-3">
+                <motion.div
+                  initial={{ opacity: 0, y: 48 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+                  className="p-5 sm:p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:border-blue-400 dark:hover:border-cyan-400/50 backdrop-blur-md transition-all duration-300 space-y-3"
+                >
                   <div className="flex flex-wrap items-center justify-between gap-1.5">
                     <div>
                       <h4 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
@@ -145,7 +151,7 @@ export default function Experience() {
                       </span>
                     ))}
                   </div>
-                </div>
+                </motion.div>
 
               </div>
             ))}
@@ -168,7 +174,12 @@ export default function Experience() {
               </h3>
             </div>
 
-            <div className="p-5 sm:p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:border-emerald-400 dark:hover:border-emerald-500/50 backdrop-blur-md transition-all duration-300 space-y-2.5 group">
+            <motion.div
+              initial={{ opacity: 0, y: 48 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+              className="p-5 sm:p-6 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:border-emerald-400 dark:hover:border-emerald-500/50 backdrop-blur-md transition-all duration-300 space-y-2.5 group"
+            >
               <div className="flex flex-wrap items-center justify-between gap-1.5">
                 <div>
                   <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
@@ -197,7 +208,7 @@ export default function Experience() {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* 2. BAGIAN BAWAH: Kartu Sertifikasi Unggulan (Grid Badge Interaktif) */}
@@ -217,7 +228,12 @@ export default function Experience() {
             </div>
 
             {/* Grid Kartu/Badge Sertifikat */}
-            <div className="grid grid-cols-1 gap-2.5">
+            <motion.div
+              initial={{ opacity: 0, y: 48 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
+              className="grid grid-cols-1 gap-2.5"
+            >
               {CERT_HIGHLIGHTS.map((cert) => (
                 <a
                   key={cert.title}
@@ -248,7 +264,7 @@ export default function Experience() {
                   </div>
                 </a>
               ))}
-            </div>
+            </motion.div>
           </div>
 
         </div>
