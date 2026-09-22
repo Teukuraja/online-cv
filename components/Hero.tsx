@@ -16,6 +16,24 @@ export default function Hero() {
         {/* SISI KIRI: Teks & Tombol Aksi */}
         <div className="space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start">
           
+          {/* FOTO PROFIL MOBILE: Kotak Presisi rounded-2xl w-24 h-24 di Tengah (Hanya Layar HP < sm) */}
+          <div className="sm:hidden flex justify-center w-full mb-4">
+            <div className="relative w-24 h-24 rounded-2xl p-1 bg-white/90 dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-md shadow-slate-200/60 dark:shadow-cyan-500/10 ring-1 ring-cyan-500/20 backdrop-blur-md">
+              <div className="relative w-full h-full rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950">
+                <Image
+                  src="/Profil-cv-online.jpg"
+                  alt="Foto Profil Resmi Teuku Raja Muda Alfarizi"
+                  fill
+                  priority
+                  sizes="96px"
+                  className="object-cover object-top"
+                />
+              </div>
+              {/* Indikator Online Hijau */}
+              <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-slate-900 shadow-xs" />
+            </div>
+          </div>
+
           {/* Badge Status: 🟢 Siap Bekerja */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-semibold backdrop-blur-sm shadow-xs">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
@@ -112,8 +130,8 @@ export default function Hero() {
 
         </div>
 
-        {/* SISI KANAN: Foto Profil Teroptimasi Proporsional */}
-        <div className="relative flex justify-center items-center">
+        {/* SISI KANAN: Foto Profil Desktop (Disembunyikan di Layar HP < sm) */}
+        <div className="hidden sm:flex relative justify-center items-center">
           
           {/* Ambient Glow Lingkaran Belakang */}
           <div className="absolute inset-0 max-w-xs mx-auto bg-gradient-to-tr from-blue-500/20 via-indigo-500/20 to-cyan-500/20 dark:from-cyan-500/25 dark:via-emerald-500/20 dark:to-teal-500/20 rounded-3xl blur-2xl transform -rotate-3" aria-hidden="true" />
