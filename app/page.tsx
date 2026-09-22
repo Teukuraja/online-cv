@@ -8,7 +8,7 @@ import LoadingScreen from '@/components/LoadingScreen';
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main className="min-h-screen relative overflow-hidden pb-20 md:pb-0">
       {/* Preloader / Loading Screen Berlogo TR */}
       <LoadingScreen />
 
