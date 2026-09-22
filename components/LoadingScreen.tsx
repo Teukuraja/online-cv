@@ -59,9 +59,7 @@ export default function LoadingScreen() {
                 Teuku Raja
               </h2>
               <p className="text-[11px] sm:text-xs font-bold text-blue-600 dark:text-cyan-400 tracking-widest uppercase font-mono">
-                S1 Informatika • Software Engineer
-                Sarjana Informatika
-                S1 Informatika
+                Sarjana Informatika (S1) • Software Engineer
               </p>
             </div>
 
