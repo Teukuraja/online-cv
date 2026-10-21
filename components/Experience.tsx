@@ -28,7 +28,7 @@ const EXPERIENCES = [
       'Menangani pemeriksaan rutin, perbaikan (troubleshooting), dan perawatan komponen kelistrikan serta panel pada unit alat berat.',
       'Menganalisis kerusakan perangkat keras (hardware/kelistrikan) di lapangan secara sistematis dan memastikan unit kembali beroperasi dengan aman.',
     ],
-    skills: ['Troubleshooting Elektrik', 'Panel Kontrol', 'K3 Pertambangan', 'Heavy Equipment'],
+    skills: ['Troubleshooting Elektrik', 'Panel Kontrol', 'Heavy Equipment'],
   },
 ];
 
