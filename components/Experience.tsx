@@ -12,9 +12,9 @@ const EXPERIENCES = [
     period: 'Jan 2022 – Mar 2026',
     active: true,
     points: [
-      'Memonitor stok gudang dan menyusun laporan kebutuhan pengadaan suku cadang secara berkala.',
-      'Berkoordinasi lintas tim logistik dan pengadaan untuk menjamin ketersediaan material operasional.',
-      'Menganalisis pergerakan inventaris dan efisiensi stok menggunakan Microsoft Excel tingkat lanjut & sistem pencatatan.',
+      'Mengelola pencatatan keluar-masuk dan ketersediaan stok suku cadang (spare part) alat berat untuk mendukung kelancaran operasional di lapangan.',
+      'Menyusun laporan rutin stok gudang dan menghitung perkiraan kebutuhan pengadaan barang menggunakan Microsoft Excel agar tidak terjadi kekosongan stok (stockout).',
+      'Berkoordinasi aktif dengan tim mekanik, logistik, dan bagian pembelian (purchasing) untuk memastikan ketepatan waktu kedatangan barang.',
     ],
     skills: ['Material Control', 'Excel Analysis', 'Logistik Alat Berat', 'Supply Chain'],
   },
@@ -25,8 +25,8 @@ const EXPERIENCES = [
     period: 'Jun 2021 – Sep 2021',
     active: false,
     points: [
-      'Menangani troubleshooting komponen elektrik alat berat dan instalasi panel listrik langsung di lapangan tambang.',
-      'Bekerja sistematis, disiplin kepatuhan standar K3 tinggi, dan berorientasi pada pemecahan solusi teknis cepat.',
+      'Menangani pemeriksaan rutin, perbaikan (troubleshooting), dan perawatan komponen kelistrikan serta panel pada unit alat berat.',
+      'Menganalisis kerusakan perangkat keras (hardware/kelistrikan) di lapangan secara sistematis dan memastikan unit kembali beroperasi dengan aman.',
     ],
     skills: ['Troubleshooting Elektrik', 'Panel Kontrol', 'K3 Pertambangan', 'Heavy Equipment'],
   },
