@@ -19,14 +19,14 @@ export default function ProjectsGrid() {
 
       {/* Header Bagian */}
       <div className="space-y-3 mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/25 text-blue-600 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-cyan-400" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/25 dark:border-cyan-500/30 text-blue-600 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-cyan-400 animate-pulse" />
           <span>Hasil Karya &amp; Riset Terapan</span>
         </div>
         <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           Publikasi, HAKI &amp; Proyek
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm max-w-2xl">
+        <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm max-w-2xl">
           Dokumentasi karya ilmiah yang telah terbit di jurnal bereputasi, sertifikat Hak Cipta resmi dari Kemenkumham RI, dan aplikasi web responsif.
         </p>
       </div>
@@ -44,8 +44,9 @@ export default function ProjectsGrid() {
             y: -6,
             transition: { duration: 0.2, ease: 'easeOut' },
           }}
-          className="h-full flex flex-col justify-between rounded-2xl p-6 sm:p-7 bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:border-cyan-500/40 dark:hover:border-cyan-400/60 hover:shadow-lg backdrop-blur-md transition-colors duration-300 group"
+          className="relative overflow-hidden h-full flex flex-col justify-between rounded-2xl p-6 sm:p-7 bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-sm hover:border-cyan-400/50 dark:hover:border-cyan-400/60 hover:shadow-xl hover:shadow-cyan-500/8 backdrop-blur-md transition-colors duration-300 group"
         >
+          <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 dark:from-cyan-400 dark:via-sky-400 dark:to-teal-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="space-y-5">
             {/* Header Tag */}
             <div className="flex flex-wrap items-center justify-between gap-2 min-h-[28px]">
@@ -132,8 +133,9 @@ export default function ProjectsGrid() {
             y: -6,
             transition: { duration: 0.2, ease: 'easeOut' },
           }}
-          className="h-full flex flex-col justify-between rounded-2xl p-6 sm:p-7 bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:border-cyan-500/40 dark:hover:border-cyan-400/60 hover:shadow-lg backdrop-blur-md transition-colors duration-300 group"
+          className="relative overflow-hidden h-full flex flex-col justify-between rounded-2xl p-6 sm:p-7 bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-sm hover:border-emerald-400/50 dark:hover:border-emerald-400/60 hover:shadow-xl hover:shadow-emerald-500/8 backdrop-blur-md transition-colors duration-300 group"
         >
+          <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-cyan-500 via-teal-400 to-emerald-400 dark:from-emerald-400 dark:via-teal-300 dark:to-cyan-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="space-y-5">
             {/* Header Tag */}
             <div className="flex flex-wrap items-center justify-between gap-2 min-h-[28px]">

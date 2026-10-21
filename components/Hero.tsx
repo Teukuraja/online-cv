@@ -12,6 +12,9 @@ export default function Hero() {
       className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-16 sm:pt-20 sm:pb-20 md:pt-28 md:pb-20"
       aria-label="Hero dan Tentang Saya"
     >
+      {/* Decorative ambient glows */}
+      <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-cyan-500/8 dark:from-cyan-500/12 dark:to-teal-500/8 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-0 -left-16 w-64 h-64 bg-gradient-to-tr from-indigo-500/8 to-blue-500/6 dark:from-indigo-500/10 dark:to-cyan-500/6 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         
         {/* SISI KIRI: Teks & Tombol Aksi */}
@@ -36,7 +39,7 @@ export default function Hero() {
           </div>
 
           {/* Badge Status: 🟢 Siap Bekerja */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-semibold backdrop-blur-sm shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-semibold backdrop-blur-sm shadow-sm">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
             <span>🟢 Siap Bekerja • Open to Relocation</span>
           </div>
@@ -143,10 +146,10 @@ export default function Hero() {
         <div className="hidden sm:flex relative justify-center items-center">
           
           {/* Ambient Glow Lingkaran Belakang */}
-          <div className="absolute inset-0 max-w-xs mx-auto bg-gradient-to-tr from-blue-500/20 via-indigo-500/20 to-cyan-500/20 dark:from-cyan-500/25 dark:via-emerald-500/20 dark:to-teal-500/20 rounded-3xl blur-2xl transform -rotate-3" aria-hidden="true" />
+          <div className="absolute inset-0 max-w-xs mx-auto bg-gradient-to-tr from-blue-500/25 via-indigo-500/20 to-cyan-500/25 dark:from-cyan-500/30 dark:via-emerald-500/20 dark:to-teal-500/25 rounded-3xl blur-2xl transform -rotate-3" aria-hidden="true" />
 
           {/* Kartu Bingkai Foto Profil */}
-          <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl p-2 bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-xl shadow-slate-300/40 dark:shadow-cyan-500/5 backdrop-blur-md transition-all duration-500 group hover:border-blue-400 dark:hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-cyan-500/20">
+          <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl p-2 bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-xl shadow-slate-300/40 dark:shadow-cyan-500/8 backdrop-blur-md transition-all duration-500 group hover:border-blue-300 dark:hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-cyan-500/20">
             
             <div className="relative w-full h-full rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-end justify-center">
               <Image

@@ -37,7 +37,7 @@ export default function ContactCard() {
       aria-label="Kontak dan Footer"
     >
       {/* Ambient background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 dark:bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-blue-500/8 via-indigo-500/6 to-cyan-500/8 dark:from-cyan-500/10 dark:via-blue-500/8 dark:to-emerald-500/8 rounded-full blur-3xl pointer-events-none" />
 
       {/* Card Panggilan Aksi (Terpusat) */}
       <motion.div
@@ -45,10 +45,12 @@ export default function ContactCard() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="relative rounded-3xl p-8 sm:p-14 bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-xl shadow-slate-200/50 dark:shadow-cyan-500/5 backdrop-blur-md text-center space-y-6 max-w-3xl mx-auto transition-all duration-300 hover:border-blue-400 dark:hover:border-cyan-400/50"
+        className="relative overflow-hidden rounded-3xl p-8 sm:p-14 bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-xl shadow-slate-200/60 dark:shadow-cyan-500/5 backdrop-blur-md text-center space-y-6 max-w-3xl mx-auto transition-all duration-300 hover:border-blue-300 dark:hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-blue-500/8 dark:hover:shadow-cyan-500/10"
       >
+        {/* Top gradient accent bar */}
+        <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300" />
         {/* Pill Badge: Relocation */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/30 text-blue-700 dark:text-cyan-400 text-xs font-bold">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/30 text-blue-700 dark:text-cyan-400 text-xs font-bold shadow-sm">
           <span>✈️ Siap Ditempatkan di Mana Saja (Open to Relocation)</span>
         </div>
 

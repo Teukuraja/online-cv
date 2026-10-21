@@ -27,23 +27,23 @@ export default function TechStack() {
     >
       {/* Header Bagian */}
       <div className="space-y-3 mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/25 text-blue-600 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-cyan-400" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/25 dark:border-cyan-500/30 text-blue-600 dark:text-cyan-400 font-bold text-xs uppercase tracking-wider shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-cyan-400 animate-pulse" />
           <span>Keahlian &amp; Alat Teruji</span>
         </div>
         <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           Tech Stack &amp; Arsitektur Sistem
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm max-w-2xl">
+        <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm max-w-2xl">
           Kombinasi kemampuan pengembangan aplikasi web modern, analisis data, kecerdasan buatan, dan pemeliharaan teknis perangkat keras/lunak.
         </p>
       </div>
 
       {/* POSISI 1: Baris Keahlian Berputar (Infinite Marquee) */}
-      <div className="relative w-full overflow-hidden py-4 mb-12 rounded-2xl bg-white/50 dark:bg-slate-900/40 border border-slate-200/80 dark:border-white/5 backdrop-blur-sm">
+      <div className="relative w-full overflow-hidden py-4 mb-12 rounded-2xl bg-white/60 dark:bg-slate-900/50 border border-slate-200/80 dark:border-white/8 backdrop-blur-sm shadow-sm">
         {/* Mask gradient kiri & kanan agar running text fade halus */}
-        <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-100 dark:from-slate-950 to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-100 dark:from-slate-950 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-100 dark:from-slate-950 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-100 dark:from-slate-950 to-transparent z-10 pointer-events-none" />
 
         <div className="animate-marquee flex items-center gap-3">
           {/* Double list for infinite loop */}
@@ -68,11 +68,12 @@ export default function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/15 hover:border-blue-400 dark:hover:border-cyan-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
+          className="relative overflow-hidden p-6 sm:p-7 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/15 hover:border-blue-300 dark:hover:border-cyan-400/50 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
         >
+          <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 dark:from-cyan-400 dark:via-sky-400 dark:to-teal-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/30 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/15 to-indigo-500/15 dark:from-cyan-500/15 dark:to-blue-500/15 border border-blue-500/20 dark:border-cyan-500/25 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
                 💻
               </div>
               <div>
@@ -108,11 +109,12 @@ export default function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:shadow-emerald-500/15 hover:border-indigo-400 dark:hover:border-emerald-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
+          className="relative overflow-hidden p-6 sm:p-7 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:shadow-emerald-500/15 hover:border-indigo-300 dark:hover:border-emerald-400/50 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
         >
+          <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-indigo-600 via-purple-500 to-emerald-400 dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 dark:bg-emerald-500/10 border border-indigo-500/20 dark:border-emerald-500/30 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500/15 to-purple-500/15 dark:from-emerald-500/15 dark:to-teal-500/15 border border-indigo-500/20 dark:border-emerald-500/25 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
                 🗄️
               </div>
               <div>
@@ -148,11 +150,12 @@ export default function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-          className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 dark:hover:shadow-teal-500/15 hover:border-cyan-400 dark:hover:border-teal-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
+          className="relative overflow-hidden p-6 sm:p-7 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 dark:hover:shadow-teal-500/15 hover:border-cyan-300 dark:hover:border-teal-400/50 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
         >
+          <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-cyan-500 via-teal-400 to-emerald-400 dark:from-teal-400 dark:via-cyan-300 dark:to-emerald-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 dark:bg-teal-500/10 border border-cyan-500/20 dark:border-teal-500/30 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/15 to-teal-500/15 dark:from-teal-500/15 dark:to-cyan-500/15 border border-cyan-500/20 dark:border-teal-500/25 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
                 🤖
               </div>
               <div>
@@ -188,11 +191,12 @@ export default function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-amber-500/10 dark:hover:shadow-amber-500/15 hover:border-amber-400 dark:hover:border-amber-400/60 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
+          className="relative overflow-hidden p-6 sm:p-7 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:shadow-amber-500/10 dark:hover:shadow-amber-500/15 hover:border-amber-300 dark:hover:border-amber-400/50 backdrop-blur-md transition-all duration-300 group flex flex-col justify-between"
         >
+          <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-amber-500 via-orange-400 to-yellow-400 dark:from-amber-400 dark:via-orange-300 dark:to-yellow-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 dark:bg-amber-500/10 border border-amber-500/20 dark:border-amber-500/30 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/15 to-orange-500/15 dark:from-amber-500/15 dark:to-yellow-500/10 border border-amber-500/20 dark:border-amber-500/25 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
                 🛠️
               </div>
               <div>
