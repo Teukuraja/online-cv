@@ -39,7 +39,7 @@ export default function Navbar() {
       {/* ========================================================================= */}
       <header className={`hidden md:flex fixed top-0 inset-x-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? 'bg-white/70 dark:bg-slate-950/75 backdrop-blur-xl border-b border-slate-200/80 dark:border-white/10 shadow-sm shadow-slate-900/5 dark:shadow-black/20'
+          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/80 dark:border-white/10 shadow-sm shadow-slate-900/5 dark:shadow-black/20'
           : 'bg-transparent border-b border-transparent'
       }`}>
         <div className="max-w-5xl w-full mx-auto px-6 py-3 flex items-center justify-between">
@@ -120,8 +120,8 @@ export default function Navbar() {
       {/* ========================================================================= */}
       <header className={`md:hidden sticky top-2.5 z-40 w-[calc(100%-1.5rem)] mx-auto px-3.5 py-2 rounded-full flex items-center justify-between transition-all duration-300 ${
         scrolled
-          ? 'bg-white/75 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/80 dark:border-white/10 shadow-sm'
-          : 'bg-white/40 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200/40 dark:border-white/5'
+          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-white/10 shadow-sm'
+          : 'bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/40 dark:border-white/5'
       }`}>
         {/* Logo & Inisial + Sub-teks S1 Informatika */}
         <a

@@ -29,7 +29,7 @@ export interface ProjectItem {
 export const PROJECTS_DATA: ProjectItem[] = [
   {
     id: 'riset-jurnal-haki',
-    badge: '📜 Jurnal Polinema & Hak Cipta 2026',
+    badge: '📜 Jurnal JIP & Hak Cipta Kemenkumham 2026',
     badgeType: 'journal',
     title: 'Analisis Pemakaian Spare Part Alat Berat Menggunakan Simple Moving Average',
     description:
@@ -41,7 +41,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
       { icon: '📊', label: 'Algoritma Moving Average' },
       { icon: '🏭', label: 'Efisiensi Operasional' },
     ],
-    techStack: ['Python', 'Streamlit/React', 'Analisis Data', 'Algoritma SMA'],
+    techStack: ['Python', 'Streamlit / React', 'Analisis Data', 'Algoritma SMA'],
     primaryAction: {
       label: 'Baca Jurnal',
       url: 'https://jurnal.polinema.ac.id/index.php/jip/article/view/9491',
@@ -54,17 +54,17 @@ export const PROJECTS_DATA: ProjectItem[] = [
     },
   },
   {
-    id: 'aplikasi-web-responsif',
-    badge: '💻 Aplikasi Web',
+    id: 'saas-sparepart-dashboard',
+    badge: '⚡ Flagship SaaS Dashboard',
     badgeType: 'web',
-    title: 'Aplikasi Web Responsif Interaktif',
+    title: 'Multi-Tenant Heavy Equipment Spare Part Analytics & Inventory Dashboard',
     description:
-      'Mengembangkan antarmuka web responsif dan interaktif menggunakan React.js & Tailwind CSS dengan integrasi API/database dasar. Menitikberatkan kecepatan akses, kemudahan navigasi, dan modularitas kode.',
-    subtitleRight: 'Web Architecture',
+      'Aplikasi dashboard analitik modern untuk inventaris dan prediksi kebutuhan suku cadang alat berat. Dilengkapi fitur Moving Average Demand Forecasting, QR Code Bin Scanning untuk audit fisik gudang cepat, serta AI-assisted Data Deduplication guna standardisasi katalog part number.',
+    subtitleRight: 'SaaS & Enterprise Inventory',
     image: '/Gambar-layar-aplikasi.png',
-    imageAlt: 'Preview Aplikasi Web Responsif',
-    techStack: ['React.js', 'Tailwind CSS', 'JavaScript', 'Node.js'],
-    footerSub: 'Frontend & Backend Integration',
+    imageAlt: 'Preview Dashboard Analitik Spare Part Alat Berat',
+    techStack: ['React.js', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Moving Average AI', 'Node.js'],
+    footerSub: 'SaaS Inventory & Analytics',
     primaryAction: {
       label: 'Repositori GitHub',
       url: 'https://github.com/Teukuraja/Dashboard_Analitik_MA',

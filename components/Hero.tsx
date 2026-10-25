@@ -1,11 +1,12 @@
-'use client';
+"use client";
 
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaAward, FaFileAlt, FaShieldAlt } from 'react-icons/fa';
 import { useLenis } from '@/components/SmoothScroll';
 
 export default function Hero() {
   const { scrollTo } = useLenis();
+
   return (
     <section
       id="tentang"
@@ -15,18 +16,19 @@ export default function Hero() {
       {/* Decorative ambient glows */}
       <div className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-cyan-500/8 dark:from-cyan-500/12 dark:to-teal-500/8 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
       <div className="absolute bottom-0 -left-16 w-64 h-64 bg-gradient-to-tr from-indigo-500/8 to-blue-500/6 dark:from-indigo-500/10 dark:to-cyan-500/6 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         
         {/* SISI KIRI: Teks & Tombol Aksi */}
         <div className="space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start">
           
           {/* FOTO PROFIL MOBILE: Kotak Presisi rounded-2xl w-24 h-24 di Tengah (Hanya Layar HP < sm) */}
-          <div className="sm:hidden flex justify-center w-full mb-4">
-            <div className="relative w-24 h-24 rounded-2xl p-1 bg-white/90 dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-md shadow-slate-200/60 dark:shadow-cyan-500/10 ring-1 ring-cyan-500/20 backdrop-blur-md">
+          <div className="sm:hidden flex justify-center w-full mb-2">
+            <div className="relative w-24 h-24 rounded-2xl p-1 bg-white/90 dark:bg-slate-900/90 border border-slate-200/90 dark:border-white/10 shadow-md shadow-slate-200/60 dark:shadow-cyan-500/10 ring-1 ring-blue-500/20 backdrop-blur-md">
               <div className="relative w-full h-full rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950">
                 <Image
                   src="/Profil-cv-online.jpg"
-                  alt="Foto Profil Resmi Teuku Raja Muda Alfarizi"
+                  alt="Foto Profil Resmi Teuku Raja Muda Alfarizi, S.Kom."
                   fill
                   priority
                   sizes="96px"
@@ -44,23 +46,41 @@ export default function Hero() {
             <span>🟢 Siap Bekerja • Open to Relocation</span>
           </div>
 
-          {/* Judul Nama Lengkap */}
+          {/* Judul Nama Lengkap & Gelar */}
           <div className="space-y-2">
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
               Teuku Raja Muda <br />
               <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 bg-clip-text text-transparent">
-                Alfarizi
+                Alfarizi, S.Kom.
               </span>
             </h1>
-            <p className="text-xs sm:text-sm font-bold text-blue-600 dark:text-cyan-400 tracking-wider uppercase">
-              Lulusan S1 Informatika | Junior Web Developer &amp; Analisis Data
+            <p className="text-xs sm:text-sm font-bold text-blue-600 dark:text-cyan-400 tracking-wider uppercase font-mono">
+              IT &amp; Operations Specialist | Full-Stack Developer
             </p>
           </div>
 
           {/* Narasi Ringkas */}
           <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed text-center lg:text-justify max-w-xl">
-            Lulusan S1 Informatika dengan pengalaman operasional di industri alat berat &amp; logistik. Terampil membangun antarmuka web (React.js), analisis data, serta pemeliharaan sistem &amp; perangkat pendukung. Adaptif, disiplin, dan siap ditempatkan di mana saja.
+            Memadukan pengalaman profesional lebih dari 4 tahun di bidang Material Control &amp; manajemen gudang spare part alat berat dengan keahlian rekayasa aplikasi web modern (React, Next.js, Node.js, PostgreSQL) dan kecerdasan buatan (AI) untuk membangun sistem operasional yang terukur, presisi, dan efisien.
           </p>
+
+          {/* Highlight Badge Elegan untuk Kredibilitas */}
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 dark:bg-cyan-500/10 border border-blue-500/20 dark:border-cyan-500/30 text-[11px] font-bold text-blue-700 dark:text-cyan-300">
+              <FaAward className="text-xs text-blue-600 dark:text-cyan-400" />
+              <span>4+ Tahun Pengalaman Operasional</span>
+            </span>
+
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/20 dark:border-emerald-500/30 text-[11px] font-bold text-emerald-700 dark:text-emerald-300">
+              <FaFileAlt className="text-xs text-emerald-600 dark:text-emerald-400" />
+              <span>Publikasi Jurnal JIP</span>
+            </span>
+
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 dark:bg-amber-500/15 border border-amber-500/20 dark:border-amber-500/30 text-[11px] font-bold text-amber-700 dark:text-amber-300">
+              <FaShieldAlt className="text-xs text-amber-600 dark:text-amber-400" />
+              <span>Terdaftar HAKI Kemenkumham RI</span>
+            </span>
+          </div>
 
           {/* Barisan Ikon Medsos Interaktif */}
           <div className="flex items-center gap-3 pt-1">
@@ -105,36 +125,48 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Tombol Aksi Utama (Lihat Proyek & Hubungi Saya) */}
+          {/* Tombol Aksi Utama (Lihat Proyek & Unduh CV) */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 w-full sm:w-auto">
             
-            {/* Lihat Proyek (Isi Gradasi) */}
+            {/* Lihat Proyek */}
             <a
               href="#proyek"
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo('#proyek', { duration: 1.8, offset: -80 });
               }}
-              className="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-md shadow-blue-500/25 dark:shadow-cyan-500/25 hover:shadow-xl hover:shadow-blue-500/40 dark:hover:shadow-cyan-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-md shadow-blue-500/25 dark:shadow-cyan-500/25 hover:shadow-xl hover:shadow-blue-500/40 dark:hover:shadow-cyan-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
             >
-              <span>Lihat Proyek &amp; HAKI</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>Lihat Proyek &amp; Sistem</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </a>
 
-            {/* Hubungi Saya (Tombol Outline Gradasi Glowing) */}
+            {/* Unduh CV Langsung */}
+            <a
+              href="/CV-Teuku-Raja-Muda-Alfarizi.pdf"
+              download="CV-Teuku-Raja-Muda-Alfarizi.pdf"
+              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 bg-white/90 dark:bg-slate-900/90 border-2 border-blue-500/30 dark:border-cyan-400/30 hover:border-blue-600 dark:hover:border-cyan-400 hover:text-blue-600 dark:hover:text-cyan-400 shadow-sm hover:shadow-lg hover:shadow-blue-500/15 dark:hover:shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              <span>Unduh CV</span>
+            </a>
+
+            {/* Hubungi Saya */}
             <a
               href="#kontak"
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo('#kontak', { duration: 1.8, offset: -80 });
               }}
-              className="px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 bg-white/80 dark:bg-slate-900/80 border-2 border-blue-500/40 dark:border-cyan-400/40 hover:border-blue-600 dark:hover:border-cyan-400 hover:text-blue-600 dark:hover:text-cyan-400 shadow-xs hover:shadow-lg hover:shadow-blue-500/15 dark:hover:shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+              className="px-5 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all flex items-center gap-1.5 cursor-pointer"
             >
               <span>Hubungi Saya</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </a>
 
@@ -142,11 +174,11 @@ export default function Hero() {
 
         </div>
 
-        {/* SISI KANAN: Foto Profil Desktop (Disembunyikan di Layar HP < sm) */}
+        {/* SISI KANAN: Foto Profil Desktop */}
         <div className="hidden sm:flex relative justify-center items-center">
           
           {/* Ambient Glow Lingkaran Belakang */}
-          <div className="absolute inset-0 max-w-xs mx-auto bg-gradient-to-tr from-blue-500/25 via-indigo-500/20 to-cyan-500/25 dark:from-cyan-500/30 dark:via-emerald-500/20 dark:to-teal-500/25 rounded-3xl blur-2xl transform -rotate-3" aria-hidden="true" />
+          <div className="absolute inset-0 max-w-xs mx-auto bg-gradient-to-tr from-blue-500/20 via-indigo-500/15 to-cyan-500/20 dark:from-cyan-500/25 dark:via-blue-500/15 dark:to-teal-500/20 rounded-3xl blur-2xl transform -rotate-3" aria-hidden="true" />
 
           {/* Kartu Bingkai Foto Profil */}
           <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl p-2 bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-xl shadow-slate-300/40 dark:shadow-cyan-500/8 backdrop-blur-md transition-all duration-500 group hover:border-blue-300 dark:hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-cyan-500/20">
@@ -154,7 +186,7 @@ export default function Hero() {
             <div className="relative w-full h-full rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-end justify-center">
               <Image
                 src="/Profil-cv-online.jpg"
-                alt="Foto Profil Resmi Teuku Raja Muda Alfarizi"
+                alt="Foto Profil Resmi Teuku Raja Muda Alfarizi, S.Kom."
                 fill
                 priority
                 sizes="(max-width: 640px) 256px, 288px"
@@ -162,30 +194,30 @@ export default function Hero() {
               />
               
               {/* Soft Gradient Overlay di dasar foto */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-70" aria-hidden="true" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent opacity-80" aria-hidden="true" />
 
-             {/* Tag Nama Melayang di Bawah Foto */}
-          <div className="absolute bottom-3 inset-x-2 text-center py-2 px-2 rounded-xl bg-white/90 dark:bg-slate-950/90 border border-slate-200 dark:border-slate-800 backdrop-blur-md shadow-md">
-            <p className="text-xs font-bold text-slate-900 dark:text-white tracking-wide">
-              Teuku Raja Muda Alfarizi
-            </p>
-            <p className="text-[10px] font-semibold text-blue-600 dark:text-cyan-400 font-mono whitespace-nowrap">
-              S1 Informatika • Junior Web Developer
-            </p>
-          </div>
+              {/* Tag Nama Melayang di Bawah Foto */}
+              <div className="absolute bottom-3 inset-x-2 text-center py-2 px-2 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-white/10 backdrop-blur-md shadow-md">
+                <p className="text-xs font-bold text-slate-900 dark:text-white tracking-wide">
+                  Teuku Raja Muda Alfarizi, S.Kom.
+                </p>
+                <p className="text-[10px] font-semibold text-blue-600 dark:text-cyan-400 font-mono whitespace-nowrap">
+                  IT &amp; Operations Specialist
+                </p>
+              </div>
             </div>
 
           </div>
 
           {/* Floating Badges Interaktif */}
-          <div className="hidden sm:flex absolute -top-4 -left-6 px-3.5 py-1.5 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-800 shadow-md shadow-slate-300/50 dark:shadow-black/50 backdrop-blur-md items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200 animate-float">
-            <span className="text-blue-600 dark:text-cyan-400" aria-hidden="true">⚡</span>
-            <span>React.js &amp; Node.js</span>
+          <div className="hidden sm:flex absolute -top-4 -left-6 px-3.5 py-1.5 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-white/10 shadow-md shadow-slate-300/40 dark:shadow-black/50 backdrop-blur-md items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200 animate-float">
+            <span className="text-blue-600 dark:text-cyan-400" aria-hidden="true">📦</span>
+            <span>4+ Thn Material Control</span>
           </div>
 
-          <div className="hidden sm:flex absolute -bottom-4 -right-6 px-3.5 py-1.5 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-800 shadow-md shadow-slate-300/50 dark:shadow-black/50 backdrop-blur-md items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200 animate-float [animation-delay:2s]">
-            <span className="text-emerald-600 dark:text-emerald-400" aria-hidden="true">🤖</span>
-            <span>Microsoft Fabric &amp; Python</span>
+          <div className="hidden sm:flex absolute -bottom-4 -right-6 px-3.5 py-1.5 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-white/10 shadow-md shadow-slate-300/40 dark:shadow-black/50 backdrop-blur-md items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200 animate-float [animation-delay:2s]">
+            <span className="text-emerald-600 dark:text-emerald-400" aria-hidden="true">⚡</span>
+            <span>Full-Stack &amp; AI Systems</span>
           </div>
 
         </div>
