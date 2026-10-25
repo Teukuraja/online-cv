@@ -68,15 +68,15 @@ export default function ContactCard() {
         </p>
 
         {/* 2 Tombol Aksi Utama Berdampingan Simetris */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           {/* Tombol WhatsApp */}
           <a
             href="https://wa.me/6282350191117"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-400 dark:hover:bg-emerald-300 shadow-lg shadow-emerald-600/25 dark:shadow-emerald-400/25 hover:shadow-xl hover:shadow-emerald-600/40 dark:hover:shadow-emerald-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer"
+            className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-400 dark:hover:bg-emerald-300 shadow-lg shadow-emerald-600/25 dark:shadow-emerald-400/25 hover:shadow-xl hover:shadow-emerald-600/40 dark:hover:shadow-emerald-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer whitespace-nowrap shrink-0"
           >
-            <FaWhatsapp className="text-base" />
+            <FaWhatsapp className="text-base shrink-0" />
             <span>Kirim Pesan via WhatsApp</span>
           </a>
 
@@ -85,9 +85,9 @@ export default function ContactCard() {
             href="mailto:teuku1923@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-lg shadow-blue-500/25 dark:shadow-cyan-500/25 hover:shadow-xl hover:shadow-blue-500/40 dark:hover:shadow-cyan-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer"
+            className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-lg shadow-blue-500/25 dark:shadow-cyan-500/25 hover:shadow-xl hover:shadow-blue-500/40 dark:hover:shadow-cyan-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer whitespace-nowrap shrink-0"
           >
-            <FaEnvelope className="text-sm" />
+            <FaEnvelope className="text-sm shrink-0" />
             <span>Kirim Email Direct</span>
           </a>
         </div>

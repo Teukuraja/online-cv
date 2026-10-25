@@ -126,19 +126,19 @@ export default function Hero() {
           </div>
 
           {/* Tombol Aksi Utama (Lihat Proyek & Unduh CV) */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 w-full sm:w-auto">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
             
             {/* Lihat Proyek */}
             <a
               href="#proyek"
               onClick={(e) => {
                 e.preventDefault();
-                scrollTo('#proyek', { duration: 1.8, offset: -80 });
+                scrollTo('#proyek', { duration: 1.0, offset: -60 });
               }}
-              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-md shadow-blue-500/25 dark:shadow-cyan-500/25 hover:shadow-xl hover:shadow-blue-500/40 dark:hover:shadow-cyan-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white dark:text-slate-950 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-cyan-400 dark:via-emerald-400 dark:to-teal-300 shadow-md shadow-blue-500/25 dark:shadow-cyan-500/25 hover:shadow-xl hover:shadow-blue-500/40 dark:hover:shadow-cyan-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap shrink-0"
             >
               <span>Lihat Proyek &amp; Sistem</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </a>
@@ -147,9 +147,9 @@ export default function Hero() {
             <a
               href="/CV-Teuku-Raja-Muda-Alfarizi.pdf"
               download="CV-Teuku-Raja-Muda-Alfarizi.pdf"
-              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 bg-white/90 dark:bg-slate-900/90 border-2 border-blue-500/30 dark:border-cyan-400/30 hover:border-blue-600 dark:hover:border-cyan-400 hover:text-blue-600 dark:hover:text-cyan-400 shadow-sm hover:shadow-lg hover:shadow-blue-500/15 dark:hover:shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 bg-white/90 dark:bg-slate-900/90 border-2 border-blue-500/30 dark:border-cyan-400/30 hover:border-blue-600 dark:hover:border-cyan-400 hover:text-blue-600 dark:hover:text-cyan-400 shadow-sm hover:shadow-lg hover:shadow-blue-500/15 dark:hover:shadow-cyan-500/20 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap shrink-0"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
               <span>Unduh CV</span>
@@ -162,10 +162,10 @@ export default function Hero() {
                 e.preventDefault();
                 scrollTo('#kontak', { duration: 1.8, offset: -80 });
               }}
-              className="px-5 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all flex items-center gap-1.5 cursor-pointer"
+              className="px-5 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0"
             >
               <span>Hubungi Saya</span>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </a>

@@ -54,17 +54,17 @@ export const PROJECTS_DATA: ProjectItem[] = [
     },
   },
   {
-    id: 'saas-sparepart-dashboard',
-    badge: '⚡ Flagship SaaS Dashboard',
+    id: 'dashboard-inventori-alat-berat',
+    badge: '🔬 SISTEM TUGAS AKHIR • RESEARCH PROJECT',
     badgeType: 'web',
-    title: 'Multi-Tenant Heavy Equipment Spare Part Analytics & Inventory Dashboard',
+    title: 'Heavy Equipment Spare Part Analytics & Inventory Dashboard',
     description:
       'Aplikasi dashboard analitik modern untuk inventaris dan prediksi kebutuhan suku cadang alat berat. Dilengkapi fitur Moving Average Demand Forecasting, QR Code Bin Scanning untuk audit fisik gudang cepat, serta AI-assisted Data Deduplication guna standardisasi katalog part number.',
-    subtitleRight: 'SaaS & Enterprise Inventory',
+    subtitleRight: 'Sistem Inventori',
     image: '/Gambar-layar-aplikasi.png',
     imageAlt: 'Preview Dashboard Analitik Spare Part Alat Berat',
     techStack: ['React.js', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Moving Average AI', 'Node.js'],
-    footerSub: 'SaaS Inventory & Analytics',
+    footerSub: 'Tugas Akhir S1 Informatika • Universitas Siber Asia',
     primaryAction: {
       label: 'Repositori GitHub',
       url: 'https://github.com/Teukuraja/Dashboard_Analitik_MA',

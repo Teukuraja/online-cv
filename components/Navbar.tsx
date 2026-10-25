@@ -26,9 +26,9 @@ export default function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     if (href === '#' || href === '#home') {
-      scrollTo(0, { duration: 1.8 });
+      scrollTo(0, { duration: 1.1 });
     } else if (href.startsWith('#')) {
-      scrollTo(href, { duration: 1.8, offset: -80 });
+      scrollTo(href, { duration: 1.1, offset: -60 });
     }
   };
 
@@ -42,7 +42,7 @@ export default function Navbar() {
           ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/80 dark:border-white/10 shadow-sm shadow-slate-900/5 dark:shadow-black/20'
           : 'bg-transparent border-b border-transparent'
       }`}>
-        <div className="max-w-5xl w-full mx-auto px-6 py-3 flex items-center justify-between">
+        <div className="max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
           {/* Kiri: Inisial Logo Profil & Branding Nama Lengkap */}
           <a
             href="#"
@@ -127,23 +127,23 @@ export default function Navbar() {
         <a
           href="#"
           onClick={(e) => handleNavClick(e, '#')}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 min-w-0"
         >
           <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-500 dark:from-cyan-400 dark:to-emerald-400 flex items-center justify-center text-white dark:text-slate-950 font-black text-[11px] shadow-sm shrink-0">
             TR
           </div>
-          <div className="flex flex-col text-left">
-            <span className="text-xs font-bold tracking-tight bg-gradient-to-r from-slate-900 to-blue-600 dark:from-white dark:to-cyan-400 bg-clip-text text-transparent leading-tight">
+          <div className="flex flex-col text-left min-w-0">
+            <span className="text-xs font-bold tracking-tight bg-gradient-to-r from-slate-900 to-blue-600 dark:from-white dark:to-cyan-400 bg-clip-text text-transparent leading-tight truncate">
               Teuku Raja
             </span>
-            <span className="text-[9px] font-semibold text-blue-600 dark:text-cyan-400 font-mono tracking-wide">
+            <span className="text-[9px] font-semibold text-blue-600 dark:text-cyan-400 font-mono tracking-wide truncate">
               S1 Informatika
             </span>
           </div>
         </a>
 
         {/* Action Buttons: Tema & Unduh CV */}
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 shrink-0">
           <button
             type="button"
             onClick={toggleTheme}

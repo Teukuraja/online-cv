@@ -336,7 +336,6 @@ export default function TechStack() {
                   'Instalasi Windows OS',
                   'Driver Setup',
                   'Troubleshooting Overheat & Slowdown',
-                  'Perawatan Perangkat Kantor',
                 ].map((skill) => (
                   <span
                     key={skill}
