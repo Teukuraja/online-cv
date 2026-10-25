@@ -47,7 +47,7 @@ export default function ProjectsGrid() {
           className="relative overflow-hidden h-full flex flex-col justify-between rounded-2xl sm:rounded-3xl p-5 sm:p-6 bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-sm hover:border-cyan-400/50 dark:hover:border-cyan-400/60 hover:shadow-xl hover:shadow-cyan-500/8 backdrop-blur-md transition-colors duration-300 group"
         >
           <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 dark:from-cyan-400 dark:via-sky-400 dark:to-teal-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <div className="space-y-4">
+          <div className="space-y-3.5 flex-1 flex flex-col justify-between">
             {/* Header Tag */}
             <div className="flex flex-wrap items-center justify-between gap-2 min-h-[28px]">
               <span className="px-3 py-1 rounded-full bg-blue-500/10 dark:bg-cyan-500/15 border border-blue-500/20 dark:border-cyan-500/30 text-blue-600 dark:text-cyan-400 text-[11px] font-bold tracking-wide uppercase">
@@ -101,7 +101,7 @@ export default function ProjectsGrid() {
           </div>
 
           {/* Footer Kartu 1: Tombol Baca Jurnal & Berkas HAKI (Ujung ke Ujung / Justify-Between) */}
-          <div className="pt-4 mt-4 border-t border-slate-200/80 dark:border-white/10 flex items-center justify-between gap-3">
+          <div className="pt-3.5 mt-3.5 border-t border-slate-200/80 dark:border-white/10 flex items-center justify-between gap-3">
             {/* Tombol Primary: Baca Jurnal */}
             <a
               href={journalProject.primaryAction.url}
@@ -141,14 +141,14 @@ export default function ProjectsGrid() {
           className="relative overflow-hidden h-full flex flex-col justify-between rounded-2xl sm:rounded-3xl p-5 sm:p-6 bg-white/90 dark:bg-slate-900/90 border border-slate-200/80 dark:border-white/10 shadow-sm hover:border-emerald-400/50 dark:hover:border-emerald-400/60 hover:shadow-xl hover:shadow-emerald-500/8 backdrop-blur-md transition-colors duration-300 group"
         >
           <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-cyan-500 via-teal-400 to-emerald-400 dark:from-emerald-400 dark:via-teal-300 dark:to-cyan-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <div className="space-y-4">
+          <div className="space-y-3.5 flex-1 flex flex-col justify-between">
             {/* Header Tag */}
             <div className="flex flex-wrap items-center justify-between gap-2 min-h-[28px]">
               <span className="px-3 py-1 rounded-full bg-cyan-500/10 dark:bg-emerald-500/15 border border-cyan-500/20 dark:border-emerald-500/30 text-cyan-700 dark:text-emerald-400 text-[11px] font-bold tracking-wide uppercase">
                 {webProject.badge}
               </span>
               <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-                {webProject.subtitleRight || 'Web Architecture'}
+                {webProject.subtitleRight || 'Sistem Inventori'}
               </span>
             </div>
 
@@ -164,7 +164,7 @@ export default function ProjectsGrid() {
 
             {/* App Window Frame Preview Gambar */}
             {webProject.image && (
-              <div className="rounded-xl border border-slate-200 dark:border-white/10 shadow-sm overflow-hidden my-2.5 relative group/img bg-slate-900">
+              <div className="rounded-xl border border-slate-200 dark:border-white/10 shadow-sm overflow-hidden my-2 relative group/img bg-slate-900">
                 <div className="flex items-center px-3 py-1.5 bg-slate-800/80 border-b border-slate-700/30">
                   <span className="w-2 h-2 bg-red-500 rounded-full mr-1.5" />
                   <span className="w-2 h-2 bg-yellow-500 rounded-full mr-1.5" />
@@ -175,7 +175,7 @@ export default function ProjectsGrid() {
                   alt={webProject.imageAlt || 'Preview Dashboard Analitik Spare Part Alat Berat'}
                   width={600}
                   height={320}
-                  className="w-full h-32 sm:h-36 object-cover object-top group-hover/img:scale-105 transition-transform duration-500 ease-out"
+                  className="w-full h-28 sm:h-32 object-cover object-top group-hover/img:scale-105 transition-transform duration-500 ease-out"
                 />
               </div>
             )}
@@ -194,7 +194,7 @@ export default function ProjectsGrid() {
           </div>
 
           {/* Tombol Aksi */}
-          <div className="pt-4 mt-4 border-t border-slate-200/80 dark:border-white/10 flex items-center justify-between gap-3">
+          <div className="pt-3.5 mt-3.5 border-t border-slate-200/80 dark:border-white/10 flex items-center justify-between gap-3">
             <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 truncate max-w-[240px] sm:max-w-none">
               {webProject.footerSub || 'Tugas Akhir S1 Informatika • Universitas Siber Asia'}
             </span>

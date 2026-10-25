@@ -8,7 +8,7 @@ const EXPERIENCES = [
   {
     role: 'Material Control & Heavy Equipment Spare Part Warehouse Management',
     company: 'PT Aldzama',
-    project: 'Proyek PT Vale & PT Antam',
+    project: 'Proyek PT Vale',
     period: 'Jan 2022 – Sekarang',
     badge: '4+ Tahun Pengalaman Operasional',
     active: true,

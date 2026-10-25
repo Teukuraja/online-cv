@@ -33,7 +33,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     badgeType: 'journal',
     title: 'Analisis Pemakaian Spare Part Alat Berat Menggunakan Simple Moving Average',
     description:
-      'Merancang & membangun sistem dashboard analitik berbasis web untuk memprediksi kebutuhan suku cadang alat berat menggunakan algoritma SMA. Mengurangi risiko over-stocking dan downtime operasional di industri tambang/logistik.',
+      'Publikasi riset ilmiah di Jurnal Informatika Polinema (JIP) serta perolehan Hak Kekayaan Intelektual (HAKI) resmi dari DJKI Kemenkumham RI terkait metode Simple Moving Average untuk efisiensi inventaris alat berat.',
     highlightsTitle: 'Sorotan Riset & HAKI:',
     highlights: [
       { icon: '📈', label: 'Prediksi Suku Cadang' },
@@ -59,7 +59,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     badgeType: 'web',
     title: 'Heavy Equipment Spare Part Analytics & Inventory Dashboard',
     description:
-      'Aplikasi dashboard analitik modern untuk inventaris dan prediksi kebutuhan suku cadang alat berat. Dilengkapi fitur Moving Average Demand Forecasting, QR Code Bin Scanning untuk audit fisik gudang cepat, serta AI-assisted Data Deduplication guna standardisasi katalog part number.',
+      'Implementasi sistem dashboard web berbasis Node.js dan React.js untuk prediksi kebutuhan suku cadang alat berat. Mengoptimalkan manajemen stok dengan tingkat akurasi optimal (MAE & RMSE 0,75 pada periode N=4).',
     subtitleRight: 'Sistem Inventori',
     image: '/Gambar-layar-aplikasi.png',
     imageAlt: 'Preview Dashboard Analitik Spare Part Alat Berat',
